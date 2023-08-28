@@ -30,7 +30,6 @@ public class CategoriesServiceImpl implements CategoriesService {
 
     static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    //@Transactional
     @Override
     public CategoryDto addCategory(NewCategoryDto newCategoryDto) {
         Category category = categoryRepository.getCategoriesByName(newCategoryDto.getName());
@@ -44,7 +43,6 @@ public class CategoriesServiceImpl implements CategoriesService {
                 CategoryMapper.INSTANCE.newCategoryDtoToCategory(newCategoryDto))));
     }
 
-   // @Transactional
     @Override
     public void deleteCategory(Long catId) {
         Category category = categoryRepository.findById(catId).orElseThrow(() ->
@@ -58,7 +56,6 @@ public class CategoriesServiceImpl implements CategoriesService {
         categoryRepository.delete(category);
     }
 
-    //@Transactional
     @Override
     public CategoryDto changeCategory(Long catId, NewCategoryDto newCategoryDto) {
         Category category = categoryRepository.findById(catId).orElseThrow(() ->
@@ -79,7 +76,6 @@ public class CategoriesServiceImpl implements CategoriesService {
         return CategoryMapper.INSTANCE.categoryToCategoryDto(categoryRepository.save((category)));
     }
 
-  //  @Transactional(readOnly = true)
     @Override
     public List<CategoryDto> getCategories(Pageable pageable) {
         return categoryRepository.findAll(pageable).stream()
@@ -87,7 +83,6 @@ public class CategoriesServiceImpl implements CategoriesService {
                 .collect(Collectors.toList());
     }
 
-   // @Transactional(readOnly = true)
     @Override
     public CategoryDto getCategoryInfo(Long catId) {
         Category category = categoryRepository.findById(catId).orElseThrow(() ->
