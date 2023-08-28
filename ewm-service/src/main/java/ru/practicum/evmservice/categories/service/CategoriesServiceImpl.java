@@ -31,7 +31,7 @@ public class CategoriesServiceImpl implements CategoriesService {
 
     static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    @Transactional
+    //@Transactional
     @Override
     public CategoryDto addCategory(NewCategoryDto newCategoryDto) {
         Category category = categoryRepository.getCategoriesByName(newCategoryDto.getName());
@@ -45,7 +45,7 @@ public class CategoriesServiceImpl implements CategoriesService {
                 CategoryMapper.INSTANCE.newCategoryDtoToCategory(newCategoryDto))));
     }
 
-    @Transactional
+   // @Transactional
     @Override
     public void deleteCategory(Long catId) {
         Category category = categoryRepository.findById(catId).orElseThrow(() ->
@@ -59,7 +59,7 @@ public class CategoriesServiceImpl implements CategoriesService {
         categoryRepository.delete(category);
     }
 
-    @Transactional
+    //@Transactional
     @Override
     public CategoryDto changeCategory(Long catId, NewCategoryDto newCategoryDto) {
         Category category = categoryRepository.findById(catId).orElseThrow(() ->
