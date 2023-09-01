@@ -26,4 +26,15 @@ public class PrivateController {
     public CommentDto createCommentByUser(@PathVariable long userId, @Valid @RequestBody CommentDto commentDto) {
         return commentsService.createCommentByUser(userId, commentDto);
     }
+
+    @PatchMapping("/{userId}/comments/{commentId}")
+    public CommentDto updateCommentByUser(@PathVariable long userId, @PathVariable long commentId, @Valid @RequestBody CommentDto commentDto) {
+        return commentsService.updateCommentByUser(userId, commentId, commentDto);
+    }
+
+    @DeleteMapping("/{userId}/comments/{commentId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteCommentByUser(@PathVariable long userId, @PathVariable long commentId) {
+        commentsService.deleteCommentByUser(userId, commentId);
+    }
 }
