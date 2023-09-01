@@ -1,8 +1,8 @@
 package ru.practicum.evmservice.categories.service;
 
 import org.springframework.data.domain.Pageable;
-import ru.practicum.evmservice.categories.dto.CategoryDto;
-import ru.practicum.evmservice.categories.dto.NewCategoryDto;
+import ru.practicum.evmservice.categories.model.dto.CategoryDto;
+import ru.practicum.evmservice.categories.model.dto.NewCategoryDto;
 
 import java.util.List;
 

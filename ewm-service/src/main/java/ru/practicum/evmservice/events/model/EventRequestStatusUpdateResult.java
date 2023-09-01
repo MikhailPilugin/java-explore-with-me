@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.practicum.evmservice.requests.dto.ParticipationRequestDto;
+import ru.practicum.evmservice.requests.model.dto.ParticipationRequestDto;
 
 import java.util.List;
 

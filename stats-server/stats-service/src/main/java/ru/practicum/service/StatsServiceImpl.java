@@ -5,7 +5,7 @@ import dto.ViewStatsDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.practicum.exception.StatsException;
-import ru.practicum.mapper.StatsMapper;
+import ru.practicum.model.StatsMapper;
 import ru.practicum.repository.StatsRepository;
 
 import java.time.LocalDateTime;

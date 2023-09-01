@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import ru.practicum.evmservice.users.dto.UserShotDto;
+import ru.practicum.evmservice.users.model.dto.UserShotDto;
 
 @Getter
 @Setter
