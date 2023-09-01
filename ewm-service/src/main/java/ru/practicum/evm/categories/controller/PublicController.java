@@ -1,0 +1,30 @@
+package ru.practicum.evm.categories.controller;
+
+import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.*;
+import ru.practicum.evm.categories.model.dto.CategoryDto;
+import ru.practicum.evm.categories.service.CategoriesService;
+import ru.practicum.evm.users.model.dto.PageRequest;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(path = "/categories")
+@AllArgsConstructor
+public class PublicController {
+
+    private final CategoriesService categoriesService;
+
+    @GetMapping
+    public List<CategoryDto> getCategories(@RequestParam(value = "from", defaultValue = "0") Integer from,
+                                           @RequestParam(value = "size", defaultValue = "10") Integer size) {
+        Pageable pageable = PageRequest.createPageRequest(from, size);
+        return categoriesService.getCategories(pageable);
+    }
+
+    @GetMapping("/{catId}")
+    public CategoryDto getCategoryInfo(@PathVariable long catId) {
+        return categoriesService.getCategoryInfo(catId);
+    }
+}
