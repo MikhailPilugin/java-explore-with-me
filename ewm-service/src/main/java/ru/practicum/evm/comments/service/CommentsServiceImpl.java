@@ -3,16 +3,15 @@ package ru.practicum.evm.comments.service;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import ru.practicum.evm.comments.model.dto.CommentDto;
-import ru.practicum.evm.comments.model.dto.CommentMapper;
 import ru.practicum.evm.comments.model.Comment;
 import ru.practicum.evm.comments.model.CommentStatus;
+import ru.practicum.evm.comments.model.dto.CommentDto;
+import ru.practicum.evm.comments.model.dto.CommentMapper;
 import ru.practicum.evm.comments.repository.CommentsRepository;
 import ru.practicum.evm.events.model.Event;
 import ru.practicum.evm.events.repository.EventRepository;
 import ru.practicum.evm.exceptions.ApiError;
 import ru.practicum.evm.exceptions.ConditionsException;
-import ru.practicum.evm.exceptions.IncorrectRequestEcxeption;
 import ru.practicum.evm.exceptions.NotFoundException;
 import ru.practicum.evm.users.model.User;
 import ru.practicum.evm.users.repository.UserRepository;
@@ -20,7 +19,6 @@ import ru.practicum.evm.users.repository.UserRepository;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
