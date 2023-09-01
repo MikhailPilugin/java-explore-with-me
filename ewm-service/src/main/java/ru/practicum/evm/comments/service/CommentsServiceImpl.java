@@ -19,6 +19,7 @@ import ru.practicum.evm.users.repository.UserRepository;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -34,7 +35,11 @@ public class CommentsServiceImpl implements CommentsService {
 
     @Override
     public List<CommentDto> getAllCommentsByEvent(Long eventId) {
-        return null;
+        eventRepository.findById(eventId).orElseThrow(NotFoundException::new);
+        return commentsRepository.getCommentsByEventId(eventId).stream()
+                .filter(comment -> comment.getCommentStatus().equals(CommentStatus.PUBLISH))
+                .map(CommentMapper.INSTANCE::commentToCommentDto)
+                .collect(Collectors.toList());
     }
 
     @Override
