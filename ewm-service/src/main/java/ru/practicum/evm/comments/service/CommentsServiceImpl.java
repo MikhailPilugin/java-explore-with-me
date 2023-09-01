@@ -81,5 +81,8 @@ public class CommentsServiceImpl implements CommentsService {
 
     @Override
     public void deleteCommentByUser(Long userId, Long commentId) {
+        userRepository.findById(userId).orElseThrow(NotFoundException::new);
+        Comment comment = commentsRepository.findById(commentId).orElseThrow(NotFoundException::new);
+        commentsRepository.delete(comment);
     }
 }
