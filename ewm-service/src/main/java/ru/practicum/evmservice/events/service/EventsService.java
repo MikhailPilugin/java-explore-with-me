@@ -1,14 +1,14 @@
 package ru.practicum.evmservice.events.service;
 
 import org.springframework.data.domain.Pageable;
-import ru.practicum.evmservice.events.model.dto.EventFullDto;
-import ru.practicum.evmservice.events.model.dto.EventShortDto;
-import ru.practicum.evmservice.events.model.dto.NewEventDto;
+import ru.practicum.evmservice.events.dto.EventFullDto;
+import ru.practicum.evmservice.events.dto.EventShortDto;
+import ru.practicum.evmservice.events.dto.NewEventDto;
 import ru.practicum.evmservice.events.model.EventRequestStatusUpdateRequest;
 import ru.practicum.evmservice.events.model.EventRequestStatusUpdateResult;
 import ru.practicum.evmservice.events.model.EventState;
 import ru.practicum.evmservice.events.model.UpdateEventAdminRequest;
-import ru.practicum.evmservice.requests.model.dto.ParticipationRequestDto;
+import ru.practicum.evmservice.requests.dto.ParticipationRequestDto;
 
 import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;

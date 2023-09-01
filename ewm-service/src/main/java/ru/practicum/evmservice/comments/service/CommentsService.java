@@ -1,6 +1,6 @@
 package ru.practicum.evmservice.comments.service;
 
-import ru.practicum.evmservice.comments.model.dto.CommentDto;
+import ru.practicum.evmservice.comments.dto.CommentDto;
 
 import java.util.List;
 

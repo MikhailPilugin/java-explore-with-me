@@ -1,9 +1,9 @@
 package ru.practicum.evmservice.compilations.service;
 
 import org.springframework.data.domain.Pageable;
-import ru.practicum.evmservice.compilations.model.dto.CompilationDto;
-import ru.practicum.evmservice.compilations.model.dto.NewCompilationDto;
-import ru.practicum.evmservice.compilations.model.dto.UpdateCompilationRequest;
+import ru.practicum.evmservice.compilations.dto.CompilationDto;
+import ru.practicum.evmservice.compilations.dto.NewCompilationDto;
+import ru.practicum.evmservice.compilations.dto.UpdateCompilationRequest;
 
 import java.util.List;
 
