@@ -42,7 +42,7 @@
 
         <dependency>
             <groupId>ru.practicum</groupId>
-            <artifactId>mapper</artifactId>
+            <artifactId>stats-dto</artifactId>
             <version>${module.version}</version>
             <scope>compile</scope>
         </dependency>
